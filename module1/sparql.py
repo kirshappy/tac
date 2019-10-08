@@ -4,7 +4,7 @@ import argparse
 from datetime import datetime as dt
 import sys
 
-from SPARQLWrapper import SPARQLWrapper, JSON
+from SPARQLWrapper import SPARQLWrapper, JSON 
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-f', '--filter', type=str, help='Filtering on name')

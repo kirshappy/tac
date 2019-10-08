@@ -2,12 +2,12 @@
 
 import json
 import requests
-import sys
+import sys #
 
 def print_coord(address):
     """Retrieve coordinates from Open Street Map"""
     osm = "https://nominatim.openstreetmap.org/search"
-    data = {'q': address, 'format': 'json'}
+    data = {'q': address, 'format': 'json'} #pour éviter bruit css si xml-html
     resp = requests.get(osm, data)
     json_list = json.loads(resp.text)
     for item in json_list:
