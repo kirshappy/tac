@@ -1,10 +1,10 @@
 """Query sample mySQL database"""
 
-import argparse
+import argparse #argument lon court
 import os.path
-import requests
+import requests #requete web
 import sqlite3
-import zipfile
+import zipfile #dezipe le file
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-a', '--artist', type=str, help='Filtering on artist name')
