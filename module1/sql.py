@@ -1,4 +1,4 @@
-"""Query sample MySQL database"""
+"""Query sample mySQL database"""
 
 import argparse
 import os.path
