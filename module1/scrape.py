@@ -22,7 +22,7 @@ def get_urls():
     print(f"{len(urls)} PDF files found")
     return urls
 
-def download(urls, n=1600):
+def download(urls, n=0):
     """Dowloading all files starting from n"""
     for url in urls[n:]:
         filename = url.split("/")[-1]
@@ -52,7 +52,7 @@ if __name__ == "__main__":
         try:
             start_from = int(sys.argv[2])
         except IndexError:
-            start_from = 0
+            start_from = 1600
         download(all_urls, start_from)
         check(all_urls)
     elif task == "check":
