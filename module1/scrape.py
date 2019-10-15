@@ -6,6 +6,7 @@ import re
 import requests
 import time
 import sys
+task="dowload"
 
 def get_urls():
     """Retrieve all URLs from root AVB page"""
@@ -21,7 +22,7 @@ def get_urls():
     print(f"{len(urls)} PDF files found")
     return urls
 
-def download(urls, n=0):
+def download(urls, n=1600):
     """Dowloading all files starting from n"""
     for url in urls[n:]:
         filename = url.split("/")[-1]
