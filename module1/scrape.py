@@ -52,7 +52,7 @@ if __name__ == "__main__":
         try:
             start_from = int(sys.argv[2])
         except IndexError:
-            start_from = 1600
+            start_from = 0
         download(all_urls, start_from)
         check(all_urls)
     elif task == "check":
