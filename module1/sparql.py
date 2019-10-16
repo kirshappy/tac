@@ -15,14 +15,12 @@ def get_rows():
     sparql = SPARQLWrapper(endpoint)
 
     statement = """
-    SELECT DISTINCT ?person ?personLabel ?dateBirth ?dateDeath WHERE {
-        ?person wdt:P27 wd:Q31 .
-        ?person wdt:P106 wd:Q82955 .
-        ?person wdt:P569 ?dateBirth .
-        ?person wdt:P570 ?dateDeath .
+    SELECT DISTINCT ?place ?placeLabel ?itemLabel WHERE {
+        ?place wdt:P17 wd:Q31 .
+        ?place wdt:P31 wd:Q39614.
         SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . }
     }
-    ORDER BY ?personLabel
+order by ?placeLabel
     """
 
     sparql.setQuery(statement)
