@@ -20,7 +20,7 @@ for f in files:
         year = elems[1]
         tome = elems[3]
         covered_years.add(year)
-        decade = year[:3] + "0s"
+        decade = year[:3] + "0"
         dic[decade] += 1
         dic2[city] += 1
         dic2[tome] += 1
