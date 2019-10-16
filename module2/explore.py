@@ -1,21 +1,4 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@kirshappy 
-1
-12madewild/tac
- Code Issues 0 Pull requests 0 Projects 0 Wiki Security Insights
-tac/module2/explore.py
-@madewild madewild use "0s" format for decade and remove comment
-053f037 23 hours ago
-46 lines (38 sloc)  1.18 KB
-  
-"""Exploring the corpus"""
+#"""Exploring the corpus"""
 
 from collections import defaultdict
 import os
@@ -60,15 +43,3 @@ def plot_bar():
     plt.show()
 
 plot_bar()
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
