@@ -7,9 +7,11 @@ from nltk.corpus import stopwords
 sw = stopwords.words("french")
 sw += ["les", "plus", "cette", "fait", "faire", "être", "deux", "comme", "dont", "tout", 
        "ils", "bien", "sans", "peut", "tous", "après", "ainsi", "donc", "cet", "sous",
-       "celle", "entre", "encore", "toutes", "pendant", "moins", "dire", "cela", "non",
+       "celle","ceux", "entre", "encore", "toutes","toute" "pendant", "moins", "dire", "cela", "non",
        "faut", "trois", "aussi", "dit", "avoir", "doit", "contre", "depuis", "autres",
-       "van", "het", "autre", "jusqu"]
+       "van", "het", "autre", "jusqu","chez","idem","avant","déjà","très","parce","que",
+       "ville","bruxelle","bruxelles","commission","assistance","publique","question"
+       "conseil","communal","mesdames","messieurs","monsieur","bourgmestre"]
 sw = set(sw)
 
 year = sys.argv[1]
