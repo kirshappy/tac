@@ -29,7 +29,7 @@ def search():
             people[ent.text] += 1
     sorted_people = sorted(people.items(), key=lambda kv: kv[1], reverse=True)
 
-    for person, freq in sorted_people[:10]:
+    for person, freq in sorted_people[:20]:
         print(f"{person} appears {freq} times in the corpus")
 
 
