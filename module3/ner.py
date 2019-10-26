@@ -37,7 +37,7 @@ if __name__ == "__main__":
     try:
         if sys.argv[1] == "test":
             test()
-        elif sys.argv[1] == "search" & sys.argv[2]!= []:
+        elif sys.argv[1] == "search" and sys.argv[2]!=[]:
             search()
         else:
             print("Unknown option, please use either 'test' or 'search' with an entity abbreviation as PER, LOC, ORG ...")
