@@ -5,13 +5,15 @@ import nltk
 from nltk.corpus import stopwords
 
 sw = stopwords.words("french")
-sw += ["les", "plus", "cette", "fait", "faire", "être", "deux", "comme", "dont", "tout", 
-       "ils", "bien", "sans", "peut", "tous", "après", "ainsi", "donc", "cet", "sous",
+sw += ["les", "plus", "cette", "fait", "faire", "être", "deux", "comme", "dont", "tout","puisque","outre","avant", 
+       "ils","elles", "bien", "sans", "peut", "tous", "après", "ainsi", "donc", "cet", "sous","quelque","part",
        "celle","ceux", "entre", "encore", "toutes","toute" "pendant", "moins", "dire", "cela", "non",
-       "faut", "trois", "aussi", "dit", "avoir", "doit", "contre", "depuis", "autres",
-       "van", "het", "autre", "jusqu","chez","idem","avant","déjà","très","parce","que",
-       "ville","bruxelle","bruxelles","commission","assistance","publique","question"
-       "conseil","communal","mesdames","messieurs","monsieur","bourgmestre"]
+       "voudrais","considérant","leurs","plusieurs","celui","certaines","quand","quant","pense","beaucoup","pendant",
+       "vient","devant","dessus","etc","agit","certaine","certain","car","alors","crois","ici","peu","pourrait",
+       "faut", "trois", "aussi", "dit", "avoir", "doit", "contre", "depuis", "autres","quelques","cependant","notamment","toujours",
+       "van", "het", "autre", "jusqu","chez","idem","avant","déjà","très","parce","que","commission","assistance","publique","question","art","article",
+       "conseil","communal","mesdames","messieurs","monsieur","bourgmestre","bruxelle",
+       "janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"]
 sw = set(sw)
 
 year = sys.argv[1]
