@@ -28,6 +28,7 @@ def search():
         if ent.label_ == "PER" and len(ent.text) > 3:
             people[ent.text] += 1
     sorted_people = sorted(people.items(), key=lambda kv: kv[1], reverse=True)
+
     for person, freq in sorted_people[:10]:
         print(f"{person} appears {freq} times in the corpus")
 
