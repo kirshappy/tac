@@ -41,5 +41,5 @@ if __name__ == "__main__":
     decade = sys.argv[1] # e.g. 1870 or 1930
     files = [f for f in sorted(os.listdir(data_path)) if f"_{decade[:-1]}" in f]
     print(f"{len(files)} documents to cluster for decade {decade}")
-    clusters = cluster_texts(files, 5)
+    clusters = cluster_texts(files, 20)
     pprint(dict(clusters))
