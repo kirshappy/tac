@@ -16,10 +16,12 @@ sw += ["les", "plus", "cette", "fait", "faire", "être", "deux", "comme", "dont"
        "janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"]
 sw = set(sw)
 
-year = sys.argv[1]
+"""year = sys.argv[1]"""
 
-path = f"module3/{year}.txt"
-output = open(f"module3/{year}_keywords.txt", "w")
+"""path = f"module3/{year}.txt""
+output = open(f"module3/{year}_keywords.txt", "w")"""
+path = f"data/allRptAn.txt"
+output = open(f"module3/allRptAn_keywords.txt", "w")
 
 with open(path) as f:
     text = f.read()

@@ -8,11 +8,11 @@ sw += ["les", "plus", "cette", "fait", "faire", "être", "deux", "comme", "dont"
        "ils", "bien", "sans", "peut", "tous", "après", "ainsi", "donc", "cet", "sous",
        "celle", "entre", "encore", "toutes", "pendant", "moins", "dire", "cela", "non",
        "faut", "trois", "aussi", "dit", "avoir", "doit", "contre", "depuis", "autres",
-       "van", "het", "autre", "jusqu"]
+       "van", "het", "autre", "jusqu","voor","een","aan","der","rapport","met","messieurs","conseil","communal","année","ville","total","tôt","bourgmestre","werden","divers"]
 sw = set(sw)
 print(f"{len(sw)} stopwords used: {sorted(sw)}")
 
-path = "data/txt/all.txt"
+path = "data/txt/allRptAn.txt"
 limit = 10**8
 
 with open(path) as f:

@@ -26,6 +26,6 @@ pprint(model.wv.most_similar("école", topn=15))
 pprint(model.wv.most_similar("hôpital",topn=10))
 
 #%%
-pprint(model.wv.most_similar(positive=['mathématiques', 'université'], negative=['athénée'],topn=20))
+pprint(model.wv.most_similar(positive=['amende', 'taxi'], negative=['eau'],topn=20))
 
 # %%
