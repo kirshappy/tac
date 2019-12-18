@@ -7,7 +7,7 @@ import sys
 ignored = set(["conseil communal", "conseil général",
 "commission d'assistance","commission d'assistance publique","commission assistance","assistance publique"
 "monsieur le bourgmestre","bourgmestre","monsieur le président",
-"ville de bruxelles","ville","bruxelle","mesdames et messieurs","mesdames","messieurs"])
+"ville de bruxelles","ville","bruxelle","mesdames et messieurs","mesdames","messieurs","van","het","een"])
 
 """year = sys.argv[1]"""
 
