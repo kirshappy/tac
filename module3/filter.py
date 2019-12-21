@@ -13,13 +13,16 @@ sw += ["les", "plus", "cette", "fait", "faire", "être", "deux", "comme", "dont"
        "faut", "trois", "aussi", "dit", "avoir", "doit", "contre", "depuis", "autres","quelques","cependant","notamment","toujours",
        "van", "het", "autre", "jusqu","chez","idem","avant","déjà","très","parce","que","commission","assistance","publique","question","art","article",
        "conseil","communal","mesdames","messieurs","monsieur","bourgmestre","bruxelle","bruxelles","ville",
-       "janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"]
+       "janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre",
+       "total","franc","service","rue","demande","année","compte","administration","cour","nombre","dépense","budget",
+       "société","section","doivent","personne","peuvent","avis","favorable","intérêt","totaux","een","die","dat","zijn",
+       "voor","ann","door","januari","februari","maart","april","mei","juli","augustus","september","november","december","oktober","juni"]
 sw = set(sw)
 
 year = sys.argv[1]
 
-path = f"module3/Lkn{year}.txt"
-output = open(f"module3/{year}Lkn_keywords.txt", "w")
+path = f"module3/{year}.txt"
+output = open(f"module3/{year}keywords.txt", "w")
 os.system('say "Prêt pour "'+year)   
 
 with open(path) as f:
