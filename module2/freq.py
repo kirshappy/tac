@@ -2,6 +2,8 @@
 
 import nltk
 from nltk.corpus import stopwords
+import csv
+import sys
 
 sw = stopwords.words("french")
 sw += ["les", "plus", "cette", "fait", "faire", "être", "deux", "comme", "dont", "tout", 
@@ -12,7 +14,7 @@ sw += ["les", "plus", "cette", "fait", "faire", "être", "deux", "comme", "dont"
 sw = set(sw)
 print(f"{len(sw)} stopwords used: {sorted(sw)}")
 
-path = "data/txt/allRptAn.txt"
+path = "data/txt/all.txt"
 limit = 10**8
 
 with open(path) as f:
@@ -23,8 +25,14 @@ with open(path) as f:
     voc = set(kept)
     print(f"{len(kept)} words kept ({len(voc)} different word forms)")
     fdist = nltk.FreqDist(kept)
-    print(fdist.most_common(50))
-    fdist.plot(50, cumulative=True)
-    print(fdist.hapaxes())
-    long_words = [w for w in voc if len(w) > 15]
-    print(sorted(long_words))
+  #  print(fdist.most_common(50))
+   # fdist.plot(50, cumulative=True)
+    #print(fdist.hapaxes())
+    #long_words = [w for w in voc if len(w) > 15]
+  # """ print(sorted(long_words))"""
+
+
+with open('mycsvfile.csv','w') as f:
+    w = csv.writer(f)
+    w.writerows(fdist.items())
+    f.close
