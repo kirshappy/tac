@@ -24,4 +24,5 @@ for f in sorted(files):
             if len(words) > 1 and kw not in ignored:
                 kept.append(kw)
         print(f"{f} mentions these keywords: {', '.join(kept)}...")
+os.system('say "Prêt pour la prochaine étape"')
 

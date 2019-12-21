@@ -5,3 +5,4 @@ with open('mycsvfile.csv','w') as f:
     w = csv.writer(f)
     w.writerows(somedict.items())
     f.close
+    
