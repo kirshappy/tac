@@ -1,5 +1,5 @@
 """Filter out stopwords for word cloud"""
-
+import os
 import sys
 import nltk
 from nltk.corpus import stopwords
@@ -18,12 +18,14 @@ sw = set(sw)
 
 year = sys.argv[1]
 
-path = f"module3/{year}.txt"
-output = open(f"module3/{year}_keywords.txt", "w")
+path = f"module3/Lkn{year}.txt"
+output = open(f"module3/{year}Lkn_keywords.txt", "w")
+os.system('say "Prêt pour "'+year)   
 
 with open(path) as f:
     text = f.read()
     words = nltk.wordpunct_tokenize(text)
     kept = [w.lower() for w in words if len(w) > 2 and w.isalpha() and w.lower() not in sw]
     kept_string = " ".join(kept)
-    output.write(kept_string)
+    output.write(kept_string)   
+ 
