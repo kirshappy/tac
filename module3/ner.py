@@ -2,6 +2,8 @@
 
 from collections import defaultdict
 import sys
+import csv
+import os
 
 import spacy
 from spacy.lang.fr.examples import sentences 
@@ -20,8 +22,11 @@ def test():
         else:
             print(f"'{doc.text}' contains no entities")
 
+year=sys.argv[3]
+ents=sys.argv[2]
 def search():
-    text = open("data/allRptn.txt").read()[:1000000]
+    os.system('say "Prêt pour "'+year) 
+    text = open(f"module3/{year}.txt").read()[:1000000]
     doc = nlp(text)
     people = defaultdict(int)
     for ent in doc.ents:
@@ -29,15 +34,19 @@ def search():
             people[ent.text] += 1
     sorted_people = sorted(people.items(), key=lambda kv: kv[1], reverse=True)
 
-    for person, freq in sorted_people[:20]:
-        print(f"{person} appears {freq} times in the corpus")
-
+  #  for person, freq in sorted_people[:20]:
+   #     print(f"{person} appears {freq} times in the corpus")
+    
+    with open(f'/Users/myriam/tac/venv/csv/{year}{ents}.csv','w') as f:
+        w = csv.writer(f)
+        w.writerows(sorted_people)
+        f.close
 
 if __name__ == "__main__":
     try:
         if sys.argv[1] == "test":
             test()
-        elif sys.argv[1] == "search" and sys.argv[2]!=[]:
+        elif sys.argv[1] == "search" and sys.argv[2]!=[] and sys.argv[3]!=[]:
             search()
         else:
             print("Unknown option, please use either 'test' or 'search' with an entity abbreviation as PER, LOC, ORG ...")

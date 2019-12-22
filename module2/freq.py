@@ -14,7 +14,8 @@ sw += ["les", "plus", "cette", "fait", "faire", "être", "deux", "comme", "dont"
 sw = set(sw)
 print(f"{len(sw)} stopwords used: {sorted(sw)}")
 
-path = "data/txt/all.txt"
+year=sys.argv[1]
+path = f"module3/{year}Lkn_keywords.txt"
 limit = 10**8
 
 with open(path) as f:
@@ -32,7 +33,7 @@ with open(path) as f:
   # """ print(sorted(long_words))"""
 
 
-with open('mycsvfile.csv','w') as f:
+with open(f'{year}WordsFreq.csv','w') as f:
     w = csv.writer(f)
     w.writerows(fdist.items())
     f.close
